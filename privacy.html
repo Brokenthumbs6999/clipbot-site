@@ -13,7 +13,7 @@
 </header>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="small">Effective date: 21 November 2026</p>
+  <p class="small">Effective date: 22 November 2026</p>
 
   <p>This policy explains what information clipbot accesses, stores and shares. clipbot is a personal tool run by a
   single operator (the "owner") on the owner's own computer. It only signs in to accounts that belong to the owner.
@@ -44,8 +44,13 @@
   <ul>
     <li>The OAuth tokens are stored in a local file on the owner's computer (and as an encrypted repository secret in
       the owner's private GitHub repository, as a backup).</li>
-    <li>The IDs of uploaded videos, their scheduled times and their statistics are stored in a local database on the
-      owner's computer. Statistics are refreshed regularly and are not kept for longer than 30 days without refresh.</li>
+    <li>The IDs of uploaded videos, their scheduled times and their statistics are stored in local files on the
+      owner's computer.</li>
+    <li>YouTube statistics (views, likes, comments, average watch time) are only collected for videos published in
+      the last 30 days and are refreshed every few hours. Statistics that are older than 30 days, or that could not be
+      refreshed within 30 days, are deleted automatically.</li>
+    <li>The summary of which kinds of clips perform best is calculated from the last 30 days of YouTube statistics
+      only. It is recalculated regularly, and a summary older than 30 days is deleted instead of used.</li>
     <li>Rendered clip files are deleted from the owner's computer two days after publishing.</li>
   </ul>
 
