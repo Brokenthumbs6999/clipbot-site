@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clipbot - Privacy Policy</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">clipbot</a>
+  <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="small">Effective date: 21 November 2026</p>
+
+  <p>This policy explains what information clipbot accesses, stores and shares. clipbot is a personal tool run by a
+  single operator (the "owner") on the owner's own computer. It only signs in to accounts that belong to the owner.
+  You must agree to this policy before using clipbot's features.</p>
+
+  <h2>YouTube API Services</h2>
+  <div class="card yt">
+    <a class="yt-wrap" href="https://www.youtube.com/" title="YouTube"><img src="assets/youtubelogo.svg" alt="YouTube"></a>
+    <span>clipbot uses <strong>YouTube API Services</strong>. By using clipbot's YouTube features you agree to be bound
+    by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described
+    in the <a href="http://www.google.com/policies/privacy">Google Privacy Policy</a>.</span>
+  </div>
+
+  <h2>What information clipbot accesses</h2>
+  <ul>
+    <li><strong>OAuth access tokens</strong> for the owner's own YouTube channels, granted through Google's sign-in.
+      clipbot never asks for or stores a YouTube or Google password.</li>
+    <li><strong>Upload access</strong> (scope <code>youtube.upload</code>): to upload the owner's finished clips with
+      title, description, tags and a scheduled publish time.</li>
+    <li><strong>Read access to the owner's own videos and channel statistics</strong> (scopes
+      <code>youtube.readonly</code> and <code>yt-analytics.readonly</code>): views, likes, comments and average watch
+      time of the videos clipbot uploaded, used to see which kinds of clips perform best.</li>
+  </ul>
+  <p>clipbot does not access any other person's YouTube account, private data, subscribers' personal information,
+  comments' authors, or messages.</p>
+
+  <h2>What clipbot stores, and where</h2>
+  <ul>
+    <li>The OAuth tokens are stored in a local file on the owner's computer (and as an encrypted repository secret in
+      the owner's private GitHub repository, as a backup).</li>
+    <li>The IDs of uploaded videos, their scheduled times and their statistics are stored in a local database on the
+      owner's computer. Statistics are refreshed regularly and are not kept for longer than 30 days without refresh.</li>
+    <li>Rendered clip files are deleted from the owner's computer two days after publishing.</li>
+  </ul>
+
+  <h2>How information is used and shared</h2>
+  <p>The information is used only to upload the owner's clips and to measure their performance for the owner. clipbot
+  does not sell, rent or share this information with anyone. No third party receives it, and clipbot shows no
+  advertising. The project website (this site) uses no cookies, no analytics and no tracking.</p>
+
+  <h2>How to revoke access and delete data</h2>
+  <ul>
+    <li>Access can be revoked at any time on the Google security settings page:
+      <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
+    <li>When access is revoked, the stored tokens stop working and clipbot deletes the stored tokens and all stored
+      YouTube data (video IDs and statistics) within 7 days.</li>
+    <li>Deletion of all stored data can also be requested at any time through the contact below; it is completed within
+      7 days.</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>Questions or complaints about privacy: please open an issue at
+  <a href="https://github.com/Brokenthumbs6999/clipbot-site/issues">github.com/Brokenthumbs6999/clipbot-site/issues</a>.</p>
+
+  <h2>Changes</h2>
+  <p>Changes to this policy are published on this page with a new effective date.</p>
+</main>
+<footer>
+  <a href="./">Home</a><a href="terms.html">Terms of Service</a>
+  <a href="https://github.com/Brokenthumbs6999/clipbot-site/issues">Contact</a>
+</footer>
+</body>
+</html>

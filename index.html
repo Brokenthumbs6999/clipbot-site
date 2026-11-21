@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clipbot</title>
+<meta name="description" content="clipbot is a personal tool that turns livestream highlights into short, credited vertical clips and publishes them to its owner's own channels.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">clipbot</a>
+  <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>clipbot</h1>
+  <p class="lead">A personal, self-hosted tool that turns popular livestream moments into short vertical clips
+  and publishes them to its owner's own channels.</p>
+
+  <div class="card">
+    <strong>Privacy:</strong> clipbot only ever signs in to the owner's own accounts. Read the
+    <a href="privacy.html">Privacy Policy</a> and the <a href="terms.html">Terms of Service</a>.
+  </div>
+
+  <h2>What clipbot does</h2>
+  <ol>
+    <li>Finds popular viewer-made clips of livestreams (via the official Twitch API) and highlights viewers point to.</li>
+    <li>Edits each moment into a 9:16 short: facecam/gameplay layout, captions, a short hook, trimmed silences.</li>
+    <li>Runs a local safety and quality check; anything borderline is held for manual review.</li>
+    <li>Writes a title and description that always <strong>credit the streamer</strong> with a link to their channel.</li>
+    <li>Gives the owner a review window (keep / reject) before anything is published.</li>
+    <li>Publishes the approved clips on a fixed schedule to the owner's own channels.</li>
+  </ol>
+
+  <h2>How clipbot uses YouTube</h2>
+  <div class="card yt">
+    <a class="yt-wrap" href="https://www.youtube.com/" title="YouTube"><img src="assets/youtubelogo.svg" alt="YouTube"></a>
+    <span>Uploading to YouTube is one feature of clipbot. It uses YouTube API Services to upload the finished clips
+    to the owner's own two YouTube channels (about six Shorts per channel per day), scheduled with a publish time,
+    and to read those videos' public statistics (views, likes, watch time).</span>
+  </div>
+  <p class="small">clipbot is an independent personal project. It is not affiliated with, sponsored or endorsed by
+  YouTube or Google. By using clipbot's YouTube features you agree to the
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.</p>
+
+  <h2>Who uses clipbot</h2>
+  <p>clipbot is operated by one person for their own channels. It is not offered as a service to other users and does
+  not access anyone else's account.</p>
+</main>
+<footer>
+  <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a>
+  <a href="https://github.com/Brokenthumbs6999/clipbot-site/issues">Contact</a>
+</footer>
+</body>
+</html>
