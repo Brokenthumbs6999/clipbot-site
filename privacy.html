@@ -13,7 +13,7 @@
 </header>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="small">Effective date: 22 November 2026</p>
+  <p class="small">Effective date: 23 November 2026</p>
 
   <p>This policy explains what information clipbot accesses, stores and shares. clipbot is a personal tool run by a
   single operator (the "owner") on the owner's own computer. It only signs in to accounts that belong to the owner.
@@ -40,12 +40,45 @@
   <p>clipbot does not access any other person's YouTube account, private data, subscribers' personal information,
   comments' authors, or messages.</p>
 
+  <h2 id="tiktok">TikTok</h2>
+  <p>clipbot uses TikTok's Login Kit and Content Posting API (Direct Post) for the owner's own TikTok accounts.
+  TikTok's handling of data is described in the
+  <a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok Privacy Policy</a>.</p>
+  <ul>
+    <li><strong>Login</strong> (scope <code>user.info.basic</code>): the owner connects an account with "Log in with
+      TikTok". clipbot receives an access token, a refresh token and the account's open ID. It never asks for or stores
+      a TikTok password.</li>
+    <li><strong>Posting</strong> (scope <code>video.publish</code>): clipbot reads the account's nickname, avatar and
+      posting settings (who may view, comment, duet or stitch, and the maximum video length) to show them on its
+      posting screen. A video is sent to TikTok only after the owner chooses the settings and presses Post.</li>
+    <li><strong>Statistics</strong> (scope <code>video.list</code>): views, likes, comments and shares of the owner's own
+      posted videos, to see which kinds of clips perform best.</li>
+  </ul>
+
+  <h2 id="instagram">Instagram</h2>
+  <p>clipbot uses the Instagram Graph API (Meta) to publish Reels to the owner's own Instagram professional accounts,
+  through the Facebook Pages the owner manages. Meta's handling of data is described in the
+  <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</p>
+  <ul>
+    <li><strong>Access token</strong> for the owner's own Instagram account, granted through Meta's sign-in
+      (permissions <code>instagram_basic</code>, <code>instagram_content_publish</code>,
+      <code>instagram_manage_insights</code>, <code>pages_show_list</code>, <code>pages_read_engagement</code>,
+      <code>business_management</code>). clipbot never asks for or stores an Instagram or Facebook password.</li>
+    <li><strong>Publishing</strong>: the owner's reviewed clips are uploaded as Reels with a caption.</li>
+    <li><strong>Statistics</strong>: views, likes, comments, shares, saves and average watch time of the owner's own
+      Reels, to see which kinds of clips perform best.</li>
+  </ul>
+  <p>clipbot does not access any other person's TikTok or Instagram account, followers' personal information,
+  comments' authors, or messages.</p>
+
   <h2>What clipbot stores, and where</h2>
   <ul>
-    <li>The OAuth tokens are stored in a local file on the owner's computer (and as an encrypted repository secret in
-      the owner's private GitHub repository, as a backup).</li>
-    <li>The IDs of uploaded videos, their scheduled times and their statistics are stored in local files on the
-      owner's computer.</li>
+    <li>The access tokens (YouTube, TikTok, Instagram) are stored in local files on the owner's computer (and as
+      encrypted repository secrets in the owner's private GitHub repository, as a backup).</li>
+    <li>The IDs of uploaded videos and posts, their scheduled times and their statistics are stored in local files on
+      the owner's computer.</li>
+    <li>TikTok account details shown on the posting screen (nickname, avatar, posting settings) are fetched fresh each
+      time and are not stored.</li>
     <li>YouTube statistics (views, likes, comments, average watch time) are only collected for videos published in
       the last 30 days and are refreshed every few hours. Statistics that are older than 30 days, or that could not be
       refreshed within 30 days, are deleted automatically.</li>
@@ -65,6 +98,11 @@
       <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.</li>
     <li>When access is revoked, the stored tokens stop working and clipbot deletes the stored tokens and all stored
       YouTube data (video IDs and statistics) within 7 days.</li>
+    <li>TikTok access can be removed at any time in the TikTok app (Settings and privacy, then Security and
+      permissions, then the apps and services with access to the account). clipbot then deletes the stored TikTok
+      tokens, post IDs and statistics within 7 days.</li>
+    <li>Instagram access can be removed at any time in Instagram's or Facebook's settings (Apps and websites, or
+      Business integrations). clipbot then deletes the stored Instagram token, post IDs and statistics within 7 days.</li>
     <li>Deletion of all stored data can also be requested at any time by email to <a href="mailto:gta6knowitall@gmail.com">gta6knowitall@gmail.com</a>;
       it is completed within 7 days.</li>
   </ul>
